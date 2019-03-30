@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Full Throttle</title>
+    <link rel="shortcut icon" href="{{url_for('static',filename='img/throttle_logo.png')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light bgreen">
+
+          <a  href="">
+          <img class="logo_sz"  src="{{url_for('static',filename='img/throttle_logo.png')}}" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+      </nav>
+
+    <div class="container">
+      <div class="col-md-8">
+            <br><br>
+           <center><h5>search for the word and press enter to know the frequency</h5></center><input type="text" id="search" placeholder="Search..." class="form-control">
+           <div class="abcd">
+                <ul id="display_search">
+                </ul>
+                <!-- <ul id="freq_show" style="display:none">
+                </ul> -->
+            </div><br><br>
+            <h5 id="freq_show" style="display:none"></h5>
+
+            <!-- hiding -->
+            <!-- <div class="freq" style="display:none">
+
+             </div> -->
+      </div>
+      <!-- <small>Name</small><input type="text" id="search" name="" value=""> <br> <br> -->
+      <!-- <small>output</small><input type="text" id="search_output" name="" value=""> -->
+    </div>
+
+  </body>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+  <script src="{{url_for('static',filename='js/search_ajax.js')}}"></script>
+</html>
