@@ -19,7 +19,7 @@ def search():
             #searching for words containing (entered letters from user)
             retrieved_words=[i for i in tot_words if i.find(search_field)>=0]
             #sorting according to index position of words and length
-            fin_list=sorted(sorted(retrieved_words,key=lambda x: x.find(search_field)),key=len)
+            fin_list=sorted(sorted(retrieved_words,key=lambda x: x.find(search_field)),key=len)[:25]
         except:
             fin_list=['error']
         return jsonify({'words':fin_list})
